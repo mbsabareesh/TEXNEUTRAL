@@ -476,6 +476,9 @@ footer .col{
     align-items: flex-start;
     margin-bottom: 20px;
 }
+footer .icon a{
+    font-size: 40px;
+}
 footer a{
     font-size: 13px;
     text-decoration: none;
@@ -612,7 +615,12 @@ footer a:hover{
 }
 #about-header img{
     width: 50%;
+    border-radius: 20px;
     height: auto;
+    transition: 2s;
+}
+#about-header img:hover{
+    transform: scale(1.1);
 }
 #about-header div{
     padding: 40px;
@@ -638,7 +646,7 @@ footer a:hover{
 
 /* contact */
 #page-header.contact-header{
-    background-image: url("image/shopimage/contact.jpeg");
+    background-image: url("image/shopimage/contactimage.jpg");
     text-align: center;
     align-items: center;
 }
@@ -714,6 +722,11 @@ footer a:hover{
 }
 
 /* sign in account */
+#page-header.signin-header{
+    background-image: url("image/shopimage/sign.jpg");
+    text-align: center;
+    align-items: center;
+}
 #sign{
     display: flex;
     padding-top: 30px;
@@ -725,7 +738,7 @@ footer a:hover{
 #sign .cointainer{
     border-radius: 12px;
     padding: 30px 40px;
-    background-image: url("image/shopimage/abouts.jpg") ;
+    background-image: url("image/shopimage/signin.jpg") ;
     width: 420px;
     color: #fff;
 }
@@ -784,7 +797,11 @@ footer a:hover{
     border-radius: 40px;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+}
+.btn:hover{
+    background-color: #088178;
 }
 .register-link{
     font-size: 11px;
@@ -792,8 +809,12 @@ footer a:hover{
     margin-top: 20px;
 }
 .register-link a{
-    color: #fff;
-    text-decoration: none;
+    color: #cf0dbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    text-decoration: line;
     font-weight: 600;
 }
 .register-link p{
@@ -801,6 +822,11 @@ footer a:hover{
     text-decoration: none;
     font-weight: 600;
 }
-
+/* cart */
+#page-header.cart-header{
+    background-image: url("image/shopimage/cart\ image.jpeg");
+    text-align: center;
+    align-items: center;
+}
 
 
