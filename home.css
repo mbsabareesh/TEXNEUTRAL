@@ -194,7 +194,7 @@ body{
 #product1{
     text-align: center;
 }
-#product1 .pro{
+ #product1 .pro{
     width: 23%;
     max-width: 250px;
     padding: 10px 12px;
@@ -217,6 +217,26 @@ body{
 #product1 .pro img{
     width: 200px;
     border-radius: 29px;
+} */
+/* Add this to your home.css file */
+
+.pro {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pro img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.pro:hover img {
+    transform: scale(1.05);
 }
 #product1 .pro .des{
     text-align: start;
