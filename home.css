@@ -625,7 +625,8 @@ footer a:hover{
 
 
 #page-header.about-header{
-    background-image: url("image/shopimage/abouts.jpg");
+    background-image: url("image/shopimage/ab.jpeg");
+    width: 100%;
     text-align: center;
     align-items: center;
 }
@@ -646,7 +647,10 @@ footer a:hover{
     padding: 40px;
 }
 #about-header p{
-    font-size: 20px;
+    font-size: 15px;
+    font-style: normal;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /*video */
@@ -821,7 +825,7 @@ footer a:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
 }
 .btn:hover{
-    background-color: #088178;
+    background-color: #088178; 
 }
 .register-link{
     font-size: 11px;
@@ -833,6 +837,7 @@ footer a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 15px;
     justify-content: center;
     text-decoration: line;
     font-weight: 600;
