@@ -145,6 +145,50 @@ body{
     transition: 0.3s ease;
     cursor: pointer;
 }
+#hero1{
+    display: flex;
+}
+#hero1 a{
+    text-decoration: none;
+}
+#one{
+    height: 90vh;
+    width: 100;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero1 h4{
+    padding-bottom: 15px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+#hero1 h2{
+    margin-top: 20px;
+    color: #e18113;
+    font-size: 40px;
+}
+#hero1 h3{
+    margin-top: 20px;
+    font-size: 40px;
+}
+#hero1 button{
+    margin-top: 15px;
+    padding: 15px 28px;
+    background-color: rgb(198, 75, 235);
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
 /* feature */
 #feature{
     display: flex;
