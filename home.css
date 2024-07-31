@@ -103,6 +103,8 @@ body{
 /* main page */
 #hero{
     display: flex;
+    background-image: url("image/shopimage/homepage.webp");
+    width: 100%;
 }
 #hero a{
     text-decoration: none;
