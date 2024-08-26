@@ -933,5 +933,12 @@ footer a:hover{
     padding-left: 20px;
 }
 
-/* responsity*/
+/* terms of service*/
+#termofservice p{
+    color: #000;
+    margin-left: 60px;
+    font-size: medium;
+    margin-right: 60px;
+
+}
 
