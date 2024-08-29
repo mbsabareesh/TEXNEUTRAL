@@ -103,7 +103,7 @@ body{
 /* main page */
 #hero{
     display: flex;
-    background-image: url("image/shopimage/homepage.webp");
+    background-image: url("image/model1home.jpg");
     width: 100%;
 }
 #hero a{
