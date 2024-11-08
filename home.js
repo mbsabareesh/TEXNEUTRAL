@@ -1,7 +1,9 @@
 function addcart(){
     alert("Added To Cart")
 }
-
+function addsign(){
+  alert("THANK YOU")
+}
 /* shopimage 1,2,3 */
 
 var MainImg = document.getElementById("MainImg");
