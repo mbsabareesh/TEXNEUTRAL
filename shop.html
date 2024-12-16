@@ -54,7 +54,7 @@
                     <i class='bx bxs-cart-alt cart'></i>
                 </a>
             </div>
-            <div class="pro" onclick="window.location.href='shopprod2.html';">
+            <div class="pro">
                 <img src="image/shopimage/cd12.jpg" alt="">
                 <div class="des">
                     <span>Texneutral</span>
@@ -68,9 +68,11 @@
                     </div>
                     <h4>₹600</h4>
                 </div>
-                <a href="#"><i class='bx bxs-cart-alt cart' onclick="addcart()" ></i></a>
+                <a href="#" onclick="addToCart('White T-Shirt', '700', 'image/shopimage/wd8.jpg')">
+                    <i class='bx bxs-cart-alt cart'></i>
+                </a>
             </div>
-            <div class="pro" onclick="window.location.href='shopprod3.html';">
+            <div class="pro">
                 <img src="image/shopimage/cd13.jpg" alt="">
                 <div class="des">
                     <span>Texneutral</span>
@@ -84,7 +86,9 @@
                     </div>
                     <h4>₹500</h4>
                 </div>
-                <a href="#"><i class='bx bxs-cart-alt cart' onclick="addcart()" ></i></a>
+                <a href="#" onclick="addToCart('White T-Shirt', '700', 'image/shopimage/wd8.jpg')">
+                    <i class='bx bxs-cart-alt cart'></i>
+                </a>
             </div>
             <div class="pro" onclick="window.location.href='shopprod3.html';">
                 <img src="image/shopimage/cd14.jpg" alt="">
@@ -1296,7 +1300,7 @@
 
 <script>
     function addToCart(productName, price, imageUrl) {
-        // Get existing cart items from local storage
+    
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
         // Add the new product to the cart
@@ -1304,13 +1308,13 @@
             productName: productName,
             price: price,
             imageUrl: imageUrl,
-            quantity: 1, // Default quantity
+            quantity: 1, 
         });
 
-        // Save the updated cart back to local storage
+        
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        // Redirect to cart page
+    
         window.location.href = "cart.html";
     }
 </script>
