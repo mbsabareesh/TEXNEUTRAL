@@ -36,7 +36,7 @@
 <!--product-->
      <section id="product1" class="section-p1">
         <div class="pro-cointainer">
-            <div class="pro" onclick="window.location.href='shopprod.html';">
+            <div class="pro" >
                 <img src="image/shopimage/cd11.jpg" alt="">
                 <div class="des">
                     <span>Texneutral</span>
@@ -50,7 +50,9 @@
                     </div>
                     <h4>₹700</h4>
                 </div>
-                <a href="#"><i class='bx bxs-cart-alt cart' onclick="addcart()"  ></i></a>
+                <a href="#" onclick="addToCart('White T-Shirt', '700', 'image/shopimage/wd8.jpg')">
+                    <i class='bx bxs-cart-alt cart'></i>
+                </a>
             </div>
             <div class="pro" onclick="window.location.href='shopprod2.html';">
                 <img src="image/shopimage/cd12.jpg" alt="">
@@ -1291,6 +1293,28 @@
    <div class="copy">
     <p>© TEXNEUTRAL 2024</p>
 </div>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        // Get existing cart items from local storage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Add the new product to the cart
+        cart.push({
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl,
+            quantity: 1, // Default quantity
+        });
+
+        // Save the updated cart back to local storage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Redirect to cart page
+        window.location.href = "cart.html";
+    }
+</script>
+
     <script src="home.js"></script>
 </body>
 </html>
