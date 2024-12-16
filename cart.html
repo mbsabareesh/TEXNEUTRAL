@@ -34,20 +34,22 @@
     </section>
 
 <!--cart-->
-    <section id="cart" class="section-p1">
-        <table width="100%"> 
-            <thead>
-                <tr>
-                    <td>Remove</td>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
-                </tr>
-            </thead>
-        </table>
-    </section>
+<section id="cart" class="section-p1">
+    <table width="100%"> 
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+        </tbody>
+    </table>
+</section>
 <!--footer-->
    <footer>
     <div class="col">
@@ -91,6 +93,50 @@
    <div class="copy">
     <p>© TEXNEUTRAL 2024</p>
 </div>
+
+<script>
+    // Retrieve the cart data from local storage
+    
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Reference to the cart items table body
+
+    const cartItemsContainer = document.getElementById("cart-items");
+
+    // Generate table rows dynamically
+
+    cart.forEach((item, index) => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td><button onclick="removeItem(${index})">Remove</button></td>
+            <td><img src="${item.imageUrl}" alt="Product Image" style="width: 50px;"></td>
+            <td>${item.productName}</td>
+            <td>₹${item.price}</td>
+            <td>
+                <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+            </td>
+            <td>₹${item.price * item.quantity}</td>
+        `;
+
+        cartItemsContainer.appendChild(row);
+    });
+
+    // Function to remove an item from the cart
+
+    function removeItem(index) {
+        cart.splice(index, 1); 
+        localStorage.setItem("cart", JSON.stringify(cart)); 
+        location.reload(); 
+    }
+
+    function updateQuantity(index, newQuantity) {
+        cart[index].quantity = parseInt(newQuantity);
+        localStorage.setItem("cart", JSON.stringify(cart)); 
+        location.reload(); 
+    }
+</script>
+
     <script src="home.js"></script>
 </body>
 </html>
