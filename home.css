@@ -942,3 +942,19 @@ footer a:hover{
 
 }
 
+/* cart image store pafe */
+#cart{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 1px;
+    padding: 30px 40px;
+    background-image: url("image/shopimage/signin.jpg") ;
+    width: 100%;
+    color: #fff;
+}
+
+
+
+/* media query */
+
+
