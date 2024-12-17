@@ -21,3 +21,27 @@ var MainImg = document.getElementById("MainImg");
       smallimg[3].onclick = function(){
         MainImg.src = smallimg[3].src;
       }
+
+
+  // add to cart
+  
+  
+  
+    function addToCart(productName, price, imageUrl) {
+    
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Add the new product to the cart
+        cart.push({
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl,
+            quantity: 1, 
+        });
+
+        
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+    
+        // window.location.href = "cart.html";
+    }
